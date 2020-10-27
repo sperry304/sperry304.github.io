@@ -4,9 +4,16 @@ library(rmarkdown)
 gcr_dir <- "/Users/skipperry/Documents/golf_course_rankings/"
 web_dir <- "/Users/skipperry/Documents/sperry304.github.io/courses/"
 
-test_course_list <- c("Pine Valley", "Cypress Point")
+source(str_c(gcr_dir, "plot_rankings.R"))
 
-for (course in test_course_list) {
+current_course_list <- 
+  all_rankings %>% 
+  filter(Year == 2019) %>% 
+  select(Course) %>% 
+  distinct() %>% 
+  pull()
+
+for (course in current_course_list) {
   course_of_interest <- course
   render(
     "/Users/skipperry/Documents/golf_course_rankings/single_course.Rmd", 
