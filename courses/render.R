@@ -2,7 +2,7 @@ library(tidyverse)
 library(rmarkdown)
 
 gcr_dir <- "/Users/skipperry/Documents/golf_course_rankings/"
-web_dir <- "/Users/skipperry/Documents/sperry304.github.io/courses/"
+web_dir <- "/Users/skipperry/Documents/top100golf.github.io/courses/"
 
 source(str_c(gcr_dir, "plot_rankings.R"))
 
